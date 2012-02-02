@@ -33,6 +33,7 @@ cp -pr contrib "%{buildroot}%{_prefix}"
 cp -p client/ruby/solr-ruby/solr/conf/schema.xml "%{buildroot}%{_prefix}"/conf
 mkdir -p %{buildroot}/etc/tomcat6/Catalina/localhost/
 %__install -D -m0644 "%{SOURCE1}" "%{buildroot}/etc/tomcat6/Catalina/localhost/solr.xml"
+sed -i "s/VERSION/%{ver}/g" "%{buildroot}/etc/tomcat6/Catalina/localhost/solr.xml"
 %__install -D -m0644 "%{SOURCE2}" %{buildroot}%{_prefix}/conf
 %__install -d "%{buildroot}%{_prefix}"/data
 

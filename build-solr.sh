@@ -1,5 +1,5 @@
 #!/bin/sh
-version="3.5.0"
+version="3.6.1"
 rm -rf BUILD RPMS SRPMS tmp || true
 mkdir -p BUILD RPMS SRPMS
 

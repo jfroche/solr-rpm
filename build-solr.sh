@@ -8,4 +8,4 @@ then
     wget "http://apache.cu.be/lucene/solr/$version/apache-solr-$version.tgz" -O SOURCES/apache-solr-$version.tgz
 fi
 
-rpmbuild -ba --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" solr.spec
+rpmbuild -ba --target=noarch --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" solr.spec
